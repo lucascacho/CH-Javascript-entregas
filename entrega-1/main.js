@@ -1,4 +1,4 @@
-//valores de las letras para calcular el digito verificador
+//tabla de valores de las letras para calcular el digito verificador
 const A = '14';
 const B = '01';
 const C = '00';
@@ -43,21 +43,24 @@ const ingresar_patente = () => {
 patente = ingresar_patente();
 alert(`Patente ingresada: ${patente}`);
 
-//uso una funcion anonima a la que le paso cada letra del string, y uso eval() para que evalue cada letra como una variable (las cuales ya defini arriba) y me devuelva el valor que le corresponde
-let patente_numeros = patente.replace(/[A-Z]/g, function (x) { return eval(x) } ); 
 
-
-
-//funcion que calcula los digitos verificadores
 // Ejemplo: USW621
 // Se toman las letras y número como corresponde USW621. Se reemplazan las letras por los números según tabla
 // USW621=120211621
 // Se suman los números desde la “derecha” a la “izquierda” alternados 1+6+1+0+1=9 y 2+1+2+2=7 obteniendo los dos digitos verificadores que son 9 y 7
 
+
+//funcion que convierte las letras de la patente en numeros segun la tabla de valores
+//uso una funcion anonima a la que le paso cada letra del string, y uso eval() para que evalue cada letra como una constante (las cuales ya defini arriba) y me devuelva el valor que le corresponde
+let patente_numeros = patente.replace(/[A-Z]/g, function (x) { return eval(x) } ); 
+
+
+//funcion que calcula los digitos verificadores
+
 const calcular_digitos_verificadores = (patente_numeros) => {
     let digito_verificador_1 = 0;
     let digito_verificador_2 = 0;
-    for (let i = patente_numeros.length - 1; i >= 0 ; i--) {
+    for (let i = patente_numeros.length - 1; i >= 0 ; i--) { //recorro el string de derecha a izquierda
         if (i % 2 == 0) {
             digito_verificador_1 += parseInt(patente_numeros[i]);
         } else if (i % 2 == 1){
@@ -78,5 +81,4 @@ const calcular_digitos_verificadores = (patente_numeros) => {
 
 let digitos_verificadores = calcular_digitos_verificadores(patente_numeros);
 
-alert(`Digitos verificadores: ${digitos_verificadores}`)
-alert("Puede comprobar estos digitos ingresando al link de AGIP en la pagina")
+alert(`Digitos verificadores: ${digitos_verificadores} \n\nPuede comprobar estos digitos ingresando al link de AGIP en la pagina `)
