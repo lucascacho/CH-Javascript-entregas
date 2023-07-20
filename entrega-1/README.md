@@ -2,7 +2,7 @@
 
 ## Aplicacion generadora de digito verificador para consulta de patentes en AGIP
 
-## Link en vivo a la app: https://lab.cacho.tech/entrega-1/
+## Link en vivo a la app: [entrega-1](https://lab.cacho.tech/entrega-1/index.html)
 
 ### Origen de la idea:
 Se me ocurrio hacer esta app ya que la semana pasada tuve que interactuar con la aplicacion web de la pagina de AGIP, donde uno puede consultar el saldo a pagar de patentes de vehiculos.  
@@ -11,6 +11,8 @@ Sin embargo, al parecer, el algoritmo para generar ese digito verificador es con
 
 ### Detalles del codigo
 El codigo de esta app usa un par de conceptos mas avanzados de los que vimos en las clases. Originalmente pense que iba a poder resolver esto usando solamente los conceptos vistos, pero me encontre con que iba a tener que usar algun metodo para strings (string.replace) y tambien algunos conceptos de arrays para recorrer los strings.
+
+La app esta hosteada usando github pages en este mismo repositorio.
 
 #### Explicacion del algoritmo:
 
