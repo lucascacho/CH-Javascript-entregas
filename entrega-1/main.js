@@ -1,3 +1,5 @@
+//PreEntrega1 - Cacchione Lucas
+
 //tabla de valores de las letras para calcular el digito verificador
 const A = '14';
 const B = '01';
