@@ -2,14 +2,18 @@
 
 ## Carrito de compras para tienda de ecommerce
 
-## Link en vivo a la app: [entrega-2](https://lab.cacho.tech/entrega-2/index.html)
+### Link en vivo a la app: [entrega-2](https://lab.cacho.tech/entrega-2/index.html)
 
 ### Idea:  
 La idea es que en con las proximas entregas vaya armando las funcionalidades de mi futuro proyecto final. Quise comenzar armando la logica del carrito ya que me pareció un buen ejemplo para ir practicando los conceptos de clases y objetos.
 
 
 ### Detalles del codigo:  
-Adicionalmente a lo que pedía la consigna, usé un poco de los conceptos introductorios del DOM, que vimos en la clase del Jueves. Todavia no estoy capturando input, pero me sirve para mostrar el carrito en la pagina de manera dinamica.
+La aplicacion simula un carrito de compras con funcionalidades basicas, como agregar productos, eliminar productos y calcular precios totales.
+
+Adicionalmente a lo que pedía la consigna, usé un poco de los conceptos introductorios del DOM, que vimos en la clase del Jueves. 
+
+En el futuro obviamente los productos se cargarían de otra forma, pero por el momento esto me sirve para practicar como mostrar el carrito en la pagina de manera dinamica.
 
 La app esta hosteada usando **GitHub Pages** en este mismo repositorio.
 
