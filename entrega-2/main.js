@@ -54,9 +54,9 @@ class Carrito {
     }
 
     eliminarProductoNombre(nombre) {
-        let productoAEliminar = this.productos.find(producto => producto.nombre == nombre);
-        let index = this.productos.indexOf(productoAEliminar);
-        this.productos.splice(index, 1);
+        let productoAEliminar = this.productos.find(producto => producto.nombre.toLowerCase() == nombre.toLowerCase());
+        let posicion = this.productos.indexOf(productoAEliminar);
+        this.productos.splice(posicion, 1);
     }
 
     eliminarProductoId(id) {
@@ -90,7 +90,9 @@ while (true) {
     }
 
     else if (opcion == 2) {
-    carrito = carrito_prueba;
+        for (let producto_prueba of carrito_prueba.productos) {
+            carrito.cargarProducto(producto_prueba.nombre, producto_prueba.precio, producto_prueba.cantidad);
+        }
     }
 
     else if (opcion == 3) {
