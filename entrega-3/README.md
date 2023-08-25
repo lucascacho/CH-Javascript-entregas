@@ -12,7 +12,7 @@ Para esta entrega, seguí construyendo sobre el concepto del carrito de compras.
 Los inputs ahora son todos via formulario, o a través de un sweetAlert. Tambien incorporé funciones de guardado del carrito, usando el localStorage del explorador.
 
 
-#### Explicación de las funciones:  
+### Explicación de las funciones:  
 1) **Cargar nuevo Producto**: Permite al usuario cargar un nuevo producto al carrito, al hacer click, aparece el form para ingresar los valores.
 
 2) **Cargar productos de prueba**: Carga un carrito de prueba predefinido, a fines de simplificar las pruebas de las otras funciones.
@@ -21,7 +21,7 @@ Los inputs ahora son todos via formulario, o a través de un sweetAlert. Tambien
 
 4) **Eliminar Producto**: Permite al usuario eliminar un producto del carrito. Permite dos opciones de busqueda: Por __ID__ y por __Nombre__.
 
-### Las siguientes funciones hacen uso del LocalStorage del explorador:
+#### Las siguientes funciones hacen uso del LocalStorage del explorador:
 
 5) **Guardar carrito en storage**: Guarda el carrito actualmente en pantalla en el localstorage para poder ser recuperado en otra sesión.
 
