@@ -9,6 +9,7 @@ class Producto {
         return this.precio * this.cantidad;
     }
 
+    //tuve que crear este metodo para poder traerme el producto del storage, ya que se perdian los metodos al parsear el JSON
     static deObjeto(objeto) {
         let producto = new Producto(objeto.nombre, objeto.precio, objeto.cantidad);
         producto.id = objeto.id;
