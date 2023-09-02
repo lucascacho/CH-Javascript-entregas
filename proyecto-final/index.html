@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fuentes y stylesheet -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+    <title>Cachito's Shop</title>
+</head>
+<body>
+    <header>
+        <div class="titulo">
+            <h3>Cachito's Shop</h3>
+        </div>
+    </header>
+
+    <main>
+        <div id="container-general">
+            <section id="section-categorias">
+                <h3>Categoria</h3>
+                <select class="dropdown" id="dropdown_categorias">
+                    <option value="0">Cargando categorias...</option>
+                </select>
+                <button id="btn-sel-cat">Seleccionar Categoria</button>
+            </section>
+            <section id="section-productos"></section>
+            <section id="section-carrito"></section>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./js/main.js" type="module"></script>
+</body>
+</html>

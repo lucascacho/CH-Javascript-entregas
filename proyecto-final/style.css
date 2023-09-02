@@ -1,0 +1,122 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --azul: #33658aff;
+    --celeste: #86bbd8ff;
+    --carbon: #2f4858ff;
+    --amarillo: #f6ae2dff;
+    --naranja: #f26419ff;
+  }
+  
+  body {
+    border: black 2px solid;
+  }
+  
+  header {
+    margin: 10px;
+  }
+  
+  .titulo {
+    color: var(--carbon);
+    font-family: oswald, sans-serif;
+  }
+  
+  @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+
+  #container-general {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  #section-categorias {
+    width: 20%;
+    height: 100%;
+    margin: 30px;
+    padding: 20px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: flex-start; */
+    background-color: var(--azul);
+    border-radius: 10px;
+    position: sticky;
+    top: 10px;
+    color: white;
+  }
+
+  #section-categorias h3 {
+    margin: 10px;
+    font: 20px oswald, sans-serif;
+  }
+
+  #section-productos {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  
+  .card-producto {
+    width: 40%;
+    margin: 20px;
+    text-align: center;
+  }
+  
+  .font {
+    font-size: 18px;
+    font-family: oswald, sans-serif;
+  }
+  
+  .img-container {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .img-container img {
+    width: 90%;
+    height: 50%;
+    margin: 10px;
+  }
+  
+  .btn-agregar {
+    font-size: 15px;
+    font-family: oswald, sans-serif;
+    width: 50%;
+    padding: 10px;
+    margin-top: 10px;
+    text-align: center;
+    align-self: center;
+    color: whitesmoke;
+    background-color: var(--carbon);
+  }
+  
+  .info-producto {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #section-carrito {
+    font-family: oswald, sans-serif;
+    width: 30%;
+    height: 30%;
+    margin: 30px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: var(--azul);
+    border-radius: 10px;
+    position: sticky;
+    top: 10px;
+    color: white;
+  }
+
+  #section-carrito div {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+  }
