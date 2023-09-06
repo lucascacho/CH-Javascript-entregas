@@ -1,10 +1,11 @@
+import { agregarAlCarrito, mostrarCarrito, eliminarDelCarrito } from "./carrito.js";
+
 export async function requestProductos(apiUrl, lista_productos, cant, categoria) {
     const response = await fetch(`${apiUrl}/category/${categoria}?limit=${cant}`);
     const data = await response.json();
     lista_productos.length = 0;
     for (let producto of data.products) {
         lista_productos.push(producto);
-        console.log(producto.title);
     }
 }
 
@@ -23,7 +24,6 @@ export function mostrarProductos(productos) {
     const section_productos = document.getElementById("section-productos");
     section_productos.innerHTML = "";
     for (let producto of productos) {
-        console.log(producto.category)
         let container_producto = document.createElement("div");
         container_producto.classList.add("card-producto");
         container_producto.innerHTML = `
@@ -32,19 +32,24 @@ export function mostrarProductos(productos) {
         </div>
         <div class="info-producto">
             <h2>${producto.title}</h2>
+            <p>Marca: ${producto.brand}</p>
             <p>Precio: $${producto.price}</p>
-            <p>Stock: ${producto.stock}</p>
             <button class="btn-agregar" data-id="${producto.id}">Agregar al carrito</button>
         </div>
         `
         section_productos.appendChild(container_producto);
     }
-    let btn_agregar_carrito = document.getElementsByClassName("btn-agregar-carrito");
+
+    let btn_agregar_carrito = document.getElementsByClassName("btn-agregar");
+    // console.log(btn_agregar_carrito)
     for (let boton of btn_agregar_carrito) {
         boton.addEventListener("click", () => {
             let producto = productos.find(producto => producto.id == boton.dataset.id);
-            carrito.cargarProducto(producto.nombre, producto.precio, producto.cantidad);
+            agregarAlCarrito(producto, parseInt(1));
+            console.log(`producto agregado`);
             mostrarCarrito();
         })
     }
 }
+
+const carrito = [];
