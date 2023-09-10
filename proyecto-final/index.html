@@ -10,16 +10,14 @@
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Cachito's Shop</title>
 </head>
 <body>
-    <header>
-        <div class="titulo">
-            <h3>Cachito's Shop</h3>
+    <div class="wrapper">
+        <div id="container-header" class="titulo">
+            <h1>Cachito's Shop</h1>
         </div>
-    </header>
-
-    <main>
         <div id="container-general">
             <section id="section-categorias">
                 <h3>Categoria</h3>
@@ -29,19 +27,29 @@
                 <button id="btn-sel-cat">Seleccionar Categoria</button>
             </section>
             <section id="section-productos"></section>
-            <section id="section-carrito"></section>
-            <section id="section-carrito-footer">
-                <div id="container-total">
-                    <h3>Total: $<span id="total">0</span></h3>
+            <section id="section-carrito">
+                <div class="carrito-header">
+                    <h3>Carrito</h3>
                 </div>
-                <div id="container-btns">
-                    <button id="btn-vaciar-carrito">Vaciar Carrito</button>
-                    <button id="btn-comprar">Comprar</button>
+                <div class="carrito-body">
+                    <div id="container-carrito-productos"></div>
                 </div>
+                <div class="carrito-footer">
+                    <div id="container-total">
+                        <h3>Total: $<span id="total">0</span></h3>
+                    </div>
+                    <div id="container-btns">
+                        <button id="btn-vaciar-carrito">Vaciar Carrito</button>
+                        <button id="btn-comprar">Comprar</button>
+                    </div>
+                </div>
+        </section>
+            
         </div>
-    </main>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <script src="./js/main.js" type="module"></script>
     <script src="./js/carrito.js" type="module"></script>
 </body>
