@@ -14,7 +14,7 @@ Todo el css aplicado en este proyecto fue aprendido esta ultima semana, por lo q
 
 Con respecto al Javascript utilizado, mi enfoque fue orientado a poder armar una interfaz que pueda utilizar APIs publicas de productos, para asi mostrarlos de manera ordenada.
 
-Buscando en internet, me encontré con [DUMMYJSON](https://dummyjson.com/docs/products), que tiene un montón de APIs publicas para experimentar. Viendo todas las distintas funciones que ofrecía, me decidí por utilizarlo.
+Buscando en internet, me encontré con [dummyJSON](https://dummyjson.com/docs/products), que tiene un montón de APIs publicas para experimentar. Viendo todas las distintas funciones que ofrecía, me decidí por utilizarlo.
 
 ### Showcase de funciones:
 -**Selector de categorías dinamico:** El dropdown de la izquierda que contiene las categorias es populado de manera dinamica a traves de una API. Al momento de carga de la página, se actualiza con la ultima lista de todas las categorias disponibles en el servidor.
