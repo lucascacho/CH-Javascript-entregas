@@ -112,6 +112,15 @@
     border-radius: 5px;
   }
   
+  #section-productos .card-producto .info-producto h2 {
+    margin: 10px;
+    font: 20px oswald, sans-serif;
+  }
+
+  #section-productos .card-producto .info-producto p {
+    font: 15px oswald, sans-serif;
+  }
+
   #intro p {
     margin: 2px;
     font: 15px oswald, sans-serif;
