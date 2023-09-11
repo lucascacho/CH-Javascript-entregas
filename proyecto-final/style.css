@@ -112,6 +112,16 @@
     border-radius: 5px;
   }
   
+  #intro p {
+    margin: 2px;
+    font: 15px oswald, sans-serif;
+    text-align: center;
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    padding: 5px;
+  }
+
   .btn {
     font-size: 15px;
     font-family: oswald, sans-serif;
