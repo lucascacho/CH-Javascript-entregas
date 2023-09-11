@@ -14,5 +14,16 @@ Todo el css aplicado en este proyecto fue aprendido esta ultima semana, por lo q
 
 Con respecto al Javascript utilizado, mi enfoque fue orientado a poder armar una interfaz que pueda utilizar APIs publicas de productos, para asi mostrarlos de manera ordenada.
 
-
 Buscando en internet, me encontré con [DUMMYJSON](https://dummyjson.com/docs/products), que tiene un montón de APIs publicas para experimentar. Viendo todas las distintas funciones que ofrecía, me decidí por utilizarlo.
+
+### Funciones de la aplicación:
+-**Selector de categorías dinamico:** El dropdown de la izquierda que contiene las categorias es populado de manera dinamica a traves de una API. Al momento de carga de la página, se actualiza con la ultima lista de todas las categorias disponibles en el servidor.
+
+-**Carrito dinámico en Storage:** El carrito funciona con almacenamiento local en el browser. Utiliza como clave el campo "id", provisto por el servidor, para identificar a cada producto que se agrega. De esta forma se pueden agregar más unidades de un mismo producto, sin tener que agregar mas lineas en el carrito.
+
+-**Función de "undo" al vaciar el carrito:** Si el usuario accidentalmente hace click en "Vaciar Carrito", por unos segundos tiene la opción de deshacer el vaciado haciendo click en el toast que aparece en pantalla.
+
+
+
+
+
