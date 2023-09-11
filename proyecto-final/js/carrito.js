@@ -66,7 +66,8 @@ export function mostrarCarrito() {
     let container_total = document.getElementById("container-total");
     container_total.innerHTML = "";
     let gran_total = document.createElement("div");
-    gran_total.innerHTML = `<h3>Gran total: $${precioTotal()}</h3>`
+    gran_total.innerHTML = `<h5>Gran total: $${precioTotal()}</h5>`
+    gran_total.classList.add("gran-total");
     container_total.append(gran_total);
 }
 
@@ -109,4 +110,29 @@ function precioTotal() {
         total += producto.price * producto.cantidad;
     }
     return total;
+}
+
+export function finalizarCompra() {
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    if (carrito.length == 0) {
+        Toastify({
+            text: "El carrito esta vacio",
+            duration: 1500
+        }).showToast();
+        return;
+    }
+    Swal.fire({
+        title: "¿Desea finalizar la compra?",
+        text: `Total a pagar: $${precioTotal()}`,
+        showCancelButton: true,
+        confirmButtonColor: "#00D4FF",
+        cancelButtonColor: "#FF3600",
+        confirmButtonText: "Si",
+        cancelButtonText: "No",
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire("Compra confirmada", "¡Gracias por elegiros!", "success");
+            vaciarCarrito();
+        }
+    });
 }

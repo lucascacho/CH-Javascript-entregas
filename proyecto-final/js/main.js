@@ -1,6 +1,6 @@
 import { requestCategorias, cargarCategorias } from './categorias.js';
 import { requestProductos, mostrarProductos } from './productos.js';
-import { inicializarCarrito, agregarAlCarrito, mostrarCarrito, eliminarDelCarrito, vaciarCarrito } from './carrito.js';
+import { inicializarCarrito, mostrarCarrito, vaciarCarrito, finalizarCompra } from './carrito.js';
 
 const API_URL = 'https://dummyjson.com/products'
 
@@ -9,6 +9,7 @@ let section_productos = document.getElementById("section-productos");
 let section_carrito = document.getElementById("section-carrito");
 let btn_sel_cat = document.getElementById("btn-sel-cat");
 let btn_vaciar_carrito = document.getElementById("btn-vaciar-carrito");
+let btn_comprar = document.getElementById("btn-comprar");
 
 //tuve que agregar esto para que funcione a que cargue el dropdown, sino devolvia null. no entiendo por que.
 document.addEventListener("DOMContentLoaded", function() {
@@ -32,3 +33,7 @@ btn_vaciar_carrito.addEventListener("click", () => {
     mostrarCarrito();
 })
 
+btn_comprar.addEventListener("click", () => {
+    finalizarCompra();
+    mostrarCarrito();
+})

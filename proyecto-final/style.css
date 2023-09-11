@@ -10,6 +10,7 @@
     --carbon: #2f4858ff;
     --amarillo: #f6ae2dff;
     --naranja: #f26419ff;
+    --verde: #84A98C;
   }
   
   body {
@@ -67,6 +68,7 @@
   #section-categorias h3 {
     margin: 10px;
     font: 20px oswald, sans-serif;
+    text-align: center;
   }
 
   #section-categorias select {
@@ -81,6 +83,7 @@
     width: 70%;
     display: grid;
     grid-template-columns: repeat(3, 2fr);
+    height: 80%;
     gap: 1rem;
   }
   
@@ -95,7 +98,7 @@
     background-color: var(--celeste);
     color: black;
     border-radius: 5px;
-    justify-content: space-between;
+    justify-content: flex-end;
   }
   
   #section-productos .card-producto .img-container {
@@ -109,7 +112,7 @@
     border-radius: 5px;
   }
   
-  .btn-agregar {
+  .btn {
     font-size: 15px;
     font-family: oswald, sans-serif;
     width: 80%;
@@ -121,6 +124,21 @@
     background-color: var(--carbon);
     border-radius: 5px;
     }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    font-size: 15px;
+    font-family: oswald, sans-serif;
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    align-self: center;
+    color: whitesmoke;
+    background-color: var(--carbon);
+    border-radius: 5px;
+  }
   
   /* #section-productos .card-producto .info-producto {
     display: flex;
@@ -209,14 +227,33 @@
     text-align: center;
   }
 
-  #carrito-footer {
+  .carrito-footer {
     display: flex;
     justify-content: space-between;
     margin: 10px;
   }
 
-  #carrito-footer h3 {
+  .carrito-footer h3 {
     margin: 10px;
     font: 20px oswald, sans-serif;
     text-align: left;
+  }
+
+  .gran-total {
+    margin: 10px;
+    font: 20px oswald, sans-serif;
+    text-align: right;
+  }
+
+  #btn-comprar {
+    font-size: 15px;
+    font-family: oswald, sans-serif;
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    align-self: center;
+    color: var(--carbon);
+    background-color: var(--verde);
+    border-radius: 5px;
   }

@@ -34,13 +34,13 @@ export function mostrarProductos(productos) {
             <h2>${producto.title}</h2>
             <p>Marca: ${producto.brand}</p>
             <p>Precio: $${producto.price}</p>
-            <button class="btn-agregar" data-id="${producto.id}">Agregar al carrito</button>
+            <button class="btn" data-id="${producto.id}">Agregar al carrito</button>
         </div>
         `
         section_productos.appendChild(container_producto);
     }
 
-    let btn_agregar_carrito = document.getElementsByClassName("btn-agregar");
+    let btn_agregar_carrito = document.getElementsByClassName("btn");
     // console.log(btn_agregar_carrito)
     for (let boton of btn_agregar_carrito) {
         boton.addEventListener("click", () => {
